@@ -10,10 +10,11 @@ import AttendanceTable from "@/components/organisms/AttendanceTable";
 import AttendanceSummary from "@/components/organisms/AttendanceSummary";
 import SearchBar from "@/components/molecules/SearchBar";
 import Loading from "@/components/ui/Loading";
-import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
 import Empty from "@/components/ui/Empty";
-const [students, setStudents] = useState([]);
+
+const AttendancePage = () => {
+  const [students, setStudents] = useState([]);
   const [classes, setClasses] = useState([]);
   const [attendanceRecords, setAttendanceRecords] = useState([]);
   const [filteredStudents, setFilteredStudents] = useState([]);
