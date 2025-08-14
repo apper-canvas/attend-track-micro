@@ -1,0 +1,142 @@
+[
+  {
+    "Id": 1,
+    "name": "Emma Johnson",
+    "email": "emma.johnson@school.edu",
+    "photo": "/images/student1.jpg",
+    "enrollmentDate": "2024-08-15"
+  },
+  {
+    "Id": 2,
+    "name": "Liam Chen",
+    "email": "liam.chen@school.edu",
+    "photo": "/images/student2.jpg",
+    "enrollmentDate": "2024-08-15"
+  },
+  {
+    "Id": 3,
+    "name": "Sophia Rodriguez",
+    "email": "sophia.rodriguez@school.edu",
+    "photo": "/images/student3.jpg",
+    "enrollmentDate": "2024-08-15"
+  },
+  {
+    "Id": 4,
+    "name": "Noah Williams",
+    "email": "noah.williams@school.edu",
+    "photo": "/images/student4.jpg",
+    "enrollmentDate": "2024-08-15"
+  },
+  {
+    "Id": 5,
+    "name": "Olivia Davis",
+    "email": "olivia.davis@school.edu",
+    "photo": "/images/student5.jpg",
+    "enrollmentDate": "2024-08-15"
+  },
+  {
+    "Id": 6,
+    "name": "Ethan Miller",
+    "email": "ethan.miller@school.edu",
+    "photo": "/images/student6.jpg",
+    "enrollmentDate": "2024-08-15"
+  },
+  {
+    "Id": 7,
+    "name": "Ava Wilson",
+    "email": "ava.wilson@school.edu",
+    "photo": "/images/student7.jpg",
+    "enrollmentDate": "2024-08-15"
+  },
+  {
+    "Id": 8,
+    "name": "Mason Brown",
+    "email": "mason.brown@school.edu",
+    "photo": "/images/student8.jpg",
+    "enrollmentDate": "2024-08-15"
+  },
+  {
+    "Id": 9,
+    "name": "Isabella Garcia",
+    "email": "isabella.garcia@school.edu",
+    "photo": "/images/student9.jpg",
+    "enrollmentDate": "2024-08-16"
+  },
+  {
+    "Id": 10,
+    "name": "Lucas Anderson",
+    "email": "lucas.anderson@school.edu",
+    "photo": "/images/student10.jpg",
+    "enrollmentDate": "2024-08-16"
+  },
+  {
+    "Id": 11,
+    "name": "Mia Thompson",
+    "email": "mia.thompson@school.edu",
+    "photo": "/images/student11.jpg",
+    "enrollmentDate": "2024-08-16"
+  },
+  {
+    "Id": 12,
+    "name": "Alexander Lee",
+    "email": "alexander.lee@school.edu",
+    "photo": "/images/student12.jpg",
+    "enrollmentDate": "2024-08-16"
+  },
+  {
+    "Id": 13,
+    "name": "Charlotte Taylor",
+    "email": "charlotte.taylor@school.edu",
+    "photo": "/images/student13.jpg",
+    "enrollmentDate": "2024-08-16"
+  },
+  {
+    "Id": 14,
+    "name": "Benjamin Clark",
+    "email": "benjamin.clark@school.edu",
+    "photo": "/images/student14.jpg",
+    "enrollmentDate": "2024-08-16"
+  },
+  {
+    "Id": 15,
+    "name": "Amelia Martinez",
+    "email": "amelia.martinez@school.edu",
+    "photo": "/images/student15.jpg",
+    "enrollmentDate": "2024-08-17"
+  },
+  {
+    "Id": 16,
+    "name": "Jacob White",
+    "email": "jacob.white@school.edu",
+    "photo": "/images/student16.jpg",
+    "enrollmentDate": "2024-08-17"
+  },
+  {
+    "Id": 17,
+    "name": "Harper Hall",
+    "email": "harper.hall@school.edu",
+    "photo": "/images/student17.jpg",
+    "enrollmentDate": "2024-08-17"
+  },
+  {
+    "Id": 18,
+    "name": "Michael Young",
+    "email": "michael.young@school.edu",
+    "photo": "/images/student18.jpg",
+    "enrollmentDate": "2024-08-17"
+  },
+  {
+    "Id": 19,
+    "name": "Luna King",
+    "email": "luna.king@school.edu",
+    "photo": "/images/student19.jpg",
+    "enrollmentDate": "2024-08-17"
+  },
+  {
+    "Id": 20,
+    "name": "Daniel Scott",
+    "email": "daniel.scott@school.edu",
+    "photo": "/images/student20.jpg",
+    "enrollmentDate": "2024-08-17"
+  }
+]
