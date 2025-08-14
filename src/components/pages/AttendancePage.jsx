@@ -1,19 +1,19 @@
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { format } from "date-fns";
 import { toast } from "react-toastify";
+import StudentTimelineModal from "@/components/organisms/StudentTimelineModal";
+import { studentService } from "@/services/api/studentService";
+import { classService } from "@/services/api/classService";
+import { attendanceService } from "@/services/api/attendanceService";
 import Header from "@/components/organisms/Header";
 import AttendanceTable from "@/components/organisms/AttendanceTable";
 import AttendanceSummary from "@/components/organisms/AttendanceSummary";
 import SearchBar from "@/components/molecules/SearchBar";
 import Loading from "@/components/ui/Loading";
+import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
 import Empty from "@/components/ui/Empty";
-import { studentService } from "@/services/api/studentService";
-import { classService } from "@/services/api/classService";
-import { attendanceService } from "@/services/api/attendanceService";
-
-const AttendancePage = () => {
-  const [students, setStudents] = useState([]);
+const [students, setStudents] = useState([]);
   const [classes, setClasses] = useState([]);
   const [attendanceRecords, setAttendanceRecords] = useState([]);
   const [filteredStudents, setFilteredStudents] = useState([]);
@@ -22,7 +22,8 @@ const AttendancePage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
-
+  const [selectedStudent, setSelectedStudent] = useState(null);
+  const [isTimelineModalOpen, setIsTimelineModalOpen] = useState(false);
   const loadData = async () => {
     try {
       setLoading(true);
@@ -201,7 +202,15 @@ const AttendancePage = () => {
       console.error("Error exporting data:", err);
     }
   };
+const handleStudentClick = (student) => {
+    setSelectedStudent(student);
+    setIsTimelineModalOpen(true);
+  };
 
+  const handleCloseTimelineModal = () => {
+    setIsTimelineModalOpen(false);
+    setSelectedStudent(null);
+  };
   if (loading) {
     return <Loading />;
   }
@@ -304,12 +313,13 @@ const AttendancePage = () => {
             <SearchBar 
               onSearch={setSearchTerm}
               placeholder="Search students by name, email, or ID..."
-            />
+/>
             
             <AttendanceTable
               students={filteredStudents}
               attendanceRecords={attendanceRecords}
               onAttendanceChange={handleAttendanceChange}
+              onStudentClick={handleStudentClick}
               selectedDate={selectedDate}
               selectedClass={selectedClass}
             />
@@ -327,6 +337,12 @@ const AttendancePage = () => {
           </div>
         </div>
       </div>
+
+      <StudentTimelineModal
+        student={selectedStudent}
+        isOpen={isTimelineModalOpen}
+        onClose={handleCloseTimelineModal}
+      />
     </div>
   );
 };

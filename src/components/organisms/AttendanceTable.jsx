@@ -7,6 +7,7 @@ const AttendanceTable = ({
   students, 
   attendanceRecords, 
   onAttendanceChange,
+  onStudentClick,
   selectedDate,
   selectedClass 
 }) => {
@@ -121,12 +122,13 @@ const AttendanceTable = ({
             {sortedStudents.map((student, index) => {
               const status = getAttendanceStatus(student.Id);
               return (
-                <tr 
+<tr 
                   key={student.Id} 
                   className={`
-                    hover:bg-blue-50 transition-colors duration-200
+                    hover:bg-blue-50 transition-colors duration-200 cursor-pointer
                     ${index % 2 === 0 ? "bg-white" : "bg-gray-50/30"}
                   `}
+                  onClick={() => onStudentClick?.(student)}
                 >
                   <td className="px-6 py-4">
                     <div className="flex items-center">
@@ -154,7 +156,7 @@ const AttendanceTable = ({
                       compact={true}
                     />
                   </td>
-                  <td className="px-6 py-4">
+                  <td className="px-6 py-4" onClick={(e) => e.stopPropagation()}>
                     <AttendanceStatus 
                       status={status}
                       onStatusChange={onAttendanceChange}
